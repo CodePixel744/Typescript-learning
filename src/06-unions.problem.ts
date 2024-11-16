@@ -1,3 +1,6 @@
+
+type Role = "admin" | "user" | "super-admin";
+
 interface User {
   id: number;
   firstName: string;
@@ -8,7 +11,9 @@ interface User {
    * - 'user'
    * - 'super-admin'
    */
-  role: string;
+  // role: string;
+  role: Role;
+  //we are using union type to restrict the role to only 3 values
 }
 
 export const defaultUser: User = {
